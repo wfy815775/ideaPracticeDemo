@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="Tb_record" table="tb_record">
+        <id name="record_id" type="java.lang.Integer">
+            <column name="record_id"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="patroller_id" type="java.lang.Integer">
+            <column name="patroller_id"/>
+        </property>
+        <property name="class_name" type="java.lang.String">
+            <column name="class_name"/>
+        </property>
+        <property name="student_number" type="java.lang.String">
+            <column name="student_number"/>
+        </property>
+        <property name="student_name" type="java.lang.String">
+            <column name="student_name"/>
+        </property>
+        <property name="message" type="java.lang.String">
+            <column name="message"/>
+        </property>
+
+        <property name="stu_portrait" type="java.lang.String">
+            <column name="stu_portrait"/>
+        </property>
+
+    </class>
+</hibernate-mapping>

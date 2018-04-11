@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="empMapper">
+    <resultMap id="empMap" type="emp">
+        <id property="empno" column="empno" />
+        <result property="ename" column="ename"/>
+        <result property="job" column="job"/>
+        <result property="deptno" column="DEPTNO"/>
+        <result property="hiredate" column="hiredate"/>
+
+
+        <association property="dept" column="deptno" select="deptMapper.findDeptByDeptno"/>
+
+
+    </resultMap>
+    <sql id="insert">
+        (empno,ename)
+
+
+    </sql>
+
+
+
+<insert id="insetEmp" parameterType="collection" >
+     INSERT INTO emp <include refid="insert"/> VALUES
+    <foreach collection="list" index="index" item="item" separator=",">
+        (
+        #{item.empno},#{item.ename}
+        )
+
+    </foreach>
+</insert>
+    <select id="getEmps" parameterType="int" resultMap="empMap">
+        select * from emp <where> <if test=" empno !=null and empno != ''">
+        AND empno = #{empno}
+    </if>
+</where>
+    </select>
+
+    <select id="getEmp30"
+          parameterType="collection" resultMap="empMap">
+       select * from emp WHERE DEPTNO in
+        <foreach collection="list" index="index" item="deptno" open="(" close=")" separator=",">
+            #{deptno}
+        </foreach>
+
+    </select>
+    <select id="getEmpJob"
+           resultMap="empMap">
+      select ename,empno,deptno from emp where job='CLERK';
+    </select>
+    <select id="getEmpComm"
+            resultMap="empMap">
+      select * from emp WHERE comm > sal
+    </select>
+    <select id="getEmpName"
+            resultMap="empMap">
+        select * from emp
+    </select>
+    <select id="getEmpName1"
+          >
+     UPDATE emp set ename = REPLACE(ename,"A","a")
+</select>
+    <select id="getEmpLastDay" resultMap="empMap">
+  select ename,hiredate from emp where last_day(hiredate)-hiredate=2
+</select>
+
+    <select id="getEmpRepR" resultMap="empMap">
+  select ename from emp where ename not like '%R%'
+</select>
+    <select id="getEmpsal" resultMap="empMap">
+       SELECT ename FROM  emp WHERE DEPTNO = #{DEPTNO}
+    </select>
+
+    <!--<select id="getEmpsal" resultMap="empMap">-->
+     <!--SELECT ename from emp WHERE sal > 300 AND DEPTNO = 30-->
+    <!--</select>-->
+
+</mapper>

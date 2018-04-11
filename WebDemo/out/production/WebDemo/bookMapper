@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="GBK" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="bookMapper">
+    <resultMap id="bookMap" type="book">
+        <id property="bid" column="bid"/>
+        <result property="bname" column="bname"  javaType="String" />
+        <association property="middle" javaType="middle">
+            <result property="m_bid" column="m_bid"/>
+            <result property="m_cid" column="m_cid"/>
+        </association>
+    </resultMap>
+
+    <resultMap id="BookCtegorySelect" extends="bookMap" type="book">
+        <collection property="categories"  column="bid" select="categoryMapper.selectCnameByCid" />
+    </resultMap>
+
+    <select id="selectAllBooksCategoryByBid" resultMap="BookCtegorySelect" parameterType="string">
+        SELECT * FROM book WHERE bname = #{bname}
+    </select>
+    <select id="selectBookByCid" parameterType="int" resultMap="bookMap">
+        SELECT b.bid,b.bname,m.m_cid,m.m_bid
+        FROM
+        book b
+        INNER JOIN middle m ON m.m_bid = b.bid
+        WHERE m.m_cid = #{cid}
+    </select>
+
+</mapper>

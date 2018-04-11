@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="middleMapper">
+    <resultMap id="middleMap" type="middle">
+
+        <result property="m_bid" column="m_bid"/>
+        <result property="m_cid" column="m_cid"/>
+    </resultMap>
+
+<select id="selectBid" parameterType="int   " resultMap="middleMap">
+    SELECT m_bid FROM middle WHERE c_id = #{c_id}
+</select>
+
+
+
+</mapper>

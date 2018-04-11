@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectPlainTextFileTypeManager">
+    <file url="file://$PROJECT_DIR$/web/about_us.html" />
+    <file url="file://$PROJECT_DIR$/web/blank.html" />
+    <file url="file://$PROJECT_DIR$/web/blog.html" />
+    <file url="file://$PROJECT_DIR$/web/blog_details.html" />
+    <file url="file://$PROJECT_DIR$/web/calendar.html" />
+    <file url="file://$PROJECT_DIR$/web/charts.html" />
+    <file url="file://$PROJECT_DIR$/web/coming_soon.html" />
+    <file url="file://$PROJECT_DIR$/web/contact_us.html" />
+    <file url="file://$PROJECT_DIR$/web/data_table.html" />
+    <file url="file://$PROJECT_DIR$/web/dropzone.html" />
+    <file url="file://$PROJECT_DIR$/web/faq.html" />
+    <file url="file://$PROJECT_DIR$/web/font_awesome.html" />
+    <file url="file://$PROJECT_DIR$/web/form_component.html" />
+    <file url="file://$PROJECT_DIR$/web/form_layout.html" />
+    <file url="file://$PROJECT_DIR$/web/form_validation.html" />
+    <file url="file://$PROJECT_DIR$/web/form_wizard.html" />
+    <file url="file://$PROJECT_DIR$/web/gallery.html" />
+    <file url="file://$PROJECT_DIR$/web/glyphicons.html" />
+    <file url="file://$PROJECT_DIR$/web/grids.html" />
+    <file url="file://$PROJECT_DIR$/web/index.html" />
+    <file url="file://$PROJECT_DIR$/web/index_2.html" />
+    <file url="file://$PROJECT_DIR$/web/invoice.html" />
+    <file url="file://$PROJECT_DIR$/web/lock.html" />
+    <file url="file://$PROJECT_DIR$/web/login.html" />
+    <file url="file://$PROJECT_DIR$/web/maps_google.html" />
+    <file url="file://$PROJECT_DIR$/web/maps_vector.html" />
+    <file url="file://$PROJECT_DIR$/web/messengers.html" />
+    <file url="file://$PROJECT_DIR$/web/nestable.html" />
+    <file url="file://$PROJECT_DIR$/web/pricing_tables.html" />
+    <file url="file://$PROJECT_DIR$/web/profile.html" />
+    <file url="file://$PROJECT_DIR$/web/sidebar_closed.html" />
+    <file url="file://$PROJECT_DIR$/web/tree_view.html" />
+    <file url="file://$PROJECT_DIR$/web/ui_elements_buttons.html" />
+    <file url="file://$PROJECT_DIR$/web/ui_elements_general.html" />
+    <file url="file://$PROJECT_DIR$/web/ui_elements_tabs_accordions.html" />
+    <file url="file://$PROJECT_DIR$/web/ui_elements_typography.html" />
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>
